@@ -21,9 +21,12 @@ public class HomeController : Controller
             string dados = leitor.ReadToEnd();
             pokemons = JsonSerializer.Deserialize<List<Pokemon>>(dados);
         }
+        return View(pokemons);
+    }
+     public IActionResult Details(int id)
+    {
         return View();
     }
-
     public IActionResult Privacy()
     {
         return View();
@@ -34,4 +37,5 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
 }

@@ -7,7 +7,7 @@ dotnet new mvc -o Pokedex
 
 Executar o projeto
 cd Pokedex
-dot net watch run
+dotnet watch run
 
 Inclusão dos arquivos estáticos e
 estilização da página inicial
