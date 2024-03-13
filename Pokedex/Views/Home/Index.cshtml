@@ -4,7 +4,7 @@
     var tipos = (List<Tipo>)ViewData["Tipos"];
         string Cor(string nome){
             return tipos
-            .Where(t => t.Nome ==nome)
+            .Where(t => t.Nome == nome)
             .Select(t => t.Cor)
             .FirstOrDefault();
         }
@@ -15,11 +15,11 @@
                 <div class="col mx-auto">
                     <h1>Pokédex</h1>
                     <div class="group">
-                        <button id="btn-all" class="btn btn-md my-2 text-white bg-secondary btn-filter">
+                        <button id="btn-all" class="btn btn-md my-2 text-white bg-dark btn-filter">
                             VerTodos</button>
                         @foreach (var tipo in tipos)
                         {
-                         <button id="btn-aço" class="btn btn-sm my-2 text-white bg-dark btn-filter"
+                         <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
                             style="background-color:@tipo.Cor">@tipo.Nome</button>
                         }
                     </div>
